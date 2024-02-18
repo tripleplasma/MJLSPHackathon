@@ -5,9 +5,11 @@ const Login = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
+  const baseUrl = process.env.base_url
   const getData = async () => {
     try {
-      const response = await fetch('http://192.168.1.244:3000/users');
+      //Use IPV4 lol
+      const response = await fetch('http://10.141.188.35:3000/users');
       //console.log(response);
       const json = await response.json();
       console.log(json);
