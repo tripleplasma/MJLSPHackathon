@@ -2,7 +2,6 @@ const express = require('express');
 const { Sequelize, Op } = require('sequelize');
 
 const app = express();
-
 // Connect to MySQL database from the server
 const sequelize = new Sequelize('mydatabase', 'root', '', {
   dialect: 'mysql',
