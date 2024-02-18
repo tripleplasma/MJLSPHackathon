@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from "./Components/Login";
+import HomePage from "./Components/HomePage";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,12 @@ const HomeScreen = ({navigation}) => {
         navigation.navigate('Login')
       }
       />
+      <Button
+      title="Go to HomePage"
+      onPress={() =>
+        navigation.navigate('HomePage')
+      }
+      />
     </View>
     
   );
@@ -36,6 +43,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} options={{title:"Welcome"}}></Stack.Screen>
         <Stack.Screen name="Profile" component={ProfileScreen}></Stack.Screen>
         <Stack.Screen name="Login" component={Login}></Stack.Screen>
+        <Stack.Screen name="HomePage" component={HomePage}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
 
