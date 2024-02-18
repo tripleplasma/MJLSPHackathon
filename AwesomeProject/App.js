@@ -33,20 +33,11 @@ export default function App() {
   return (
     <NavigationContainer>      
       <Stack.Navigator>
+        <Stack.Screen name="Welcome Scholars" component={Login}></Stack.Screen>
         <Stack.Screen name="Home" component={HomeScreen} options={{title:"Welcome"}}></Stack.Screen>
         <Stack.Screen name="Profile" component={ProfileScreen}></Stack.Screen>
-        <Stack.Screen name="Login" component={Login}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
-
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
