@@ -26,6 +26,16 @@ app.get('/users', async (req, res) => {
   res.json(users);
 });
 
+app.get('/user', async (req, res) => {
+    const {id} = req.body;
+    const user = await User.findAll({
+        where:{
+            id:id
+        }
+    });
+    res.json(user);
+  });
+
 app.post('/users', async (req, res) => {
   const { name } = req.body;
   const user = await User.create({ name });

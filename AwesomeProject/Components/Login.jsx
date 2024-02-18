@@ -19,13 +19,13 @@ const Login = ({navigation}) => {
         response.json() 
             .then(data => { 
               console.log(data)
+              navigation.navigate('HomePage', {user_id:data['id']});
             }); 
       })
 
     } catch (error) {
       console.error(error);
     }
-    navigation.navigate('HomePage', {user_id: 1});
   };
 
   return (

@@ -8,32 +8,6 @@ import Profile from "./Components/Profile";
 
 const Stack = createNativeStackNavigator();
 
-const HomeScreen = ({navigation}) => {
-  return (
-    <View>
-      <Button
-      title="Go to Login"
-      onPress={() =>
-        navigation.navigate('Login')
-      }
-      />
-      <Button
-      title="Go to HomePage"
-      onPress={() =>
-        navigation.navigate('HomePage')
-      }
-      />
-      <Button
-      title="Go to Profile"
-      onPress={() =>
-        navigation.navigate('Profile')
-      }
-      />
-    </View>
-    
-  );
-};
-
 export default function App() {
   return (
     <NavigationContainer>      
