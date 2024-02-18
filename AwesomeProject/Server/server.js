@@ -12,7 +12,6 @@ const sequelize = new Sequelize('mydatabase', 'root', '', {
 // Define a model
 const User = sequelize.define('User', {
   name: Sequelize.STRING,
-  email: Sequelize.STRING,
 });
 
 // Sync the model with the database
@@ -28,9 +27,15 @@ app.get('/users', async (req, res) => {
 });
 
 app.post('/users', async (req, res) => {
-  const { name, email } = req.body;
-  const user = await User.create({ name, email });
+  const { name } = req.body;
+  const user = await User.create({ name });
   res.json(user);
+});
+
+app.post('/login', async (req, res) => {
+    const { name } = req.body;
+    const user = await User.create({ name });
+    res.json(user);
 });
 
 app.post('/del', async (req, res) => {

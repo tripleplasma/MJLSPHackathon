@@ -9,3 +9,5 @@ Setup:
 3. run: "node server.js" on a terminal to activate db
 4. run: "npx expo start" to start the app
 
+MUST BE USING THE SAME WIFI AS APP RUNNING ON
+
