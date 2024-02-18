@@ -32,9 +32,7 @@ export default function App() {
     <NavigationContainer>      
       <Stack.Navigator>
         <Stack.Screen name="Welcome Scholars" component={Login}></Stack.Screen>
-        <Stack.Screen name="Home" component={HomeScreen} options={{title:"Welcome"}}></Stack.Screen>
         <Stack.Screen name="Profile" component={Profile}></Stack.Screen>
-        <Stack.Screen name="Login" component={Login}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
